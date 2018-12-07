@@ -84,8 +84,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'datekata',
-        'USER': 'postgres',
-        'PASSWORD':'Dennisveer27'
+        'USER': 'levy',
+        'PASSWORD': 'newpassword',
     }
 }
 
@@ -131,6 +131,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'dat3kata@gmail.com'
+EMAIL_HOST_PASSWORD = 'Datekata1234'
+EMAIL_PORT = 587
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
