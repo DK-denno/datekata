@@ -1,0 +1,162 @@
+Looking for git in: git
+Using git 2.19.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /root/Documents/datekata
+> git status -z -u
+> git check-ignore -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+fatal: ambiguous argument 'master': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git show :date/models.py
+> git ls-files --stage -- date/
+> git check-ignore -z --stdin
+> git show :datekata/settings.py
+> git ls-files --stage -- datekata/
+> git show :date/urls.py
+> git ls-files --stage -- date/
+> git show :date/views.py
+> git ls-files --stage -- date/
+> git show :date/views.py
+> git show :date/views.py
+> git show :date/views.py
+> git show :date/views.py
+> git show :date/views.py
+> git show :datekata/__init__.py
+> git show :datekata/settings.py
+> git show :date/views.py
+> git show :datekata/settings.py
+> git show :datekata/__init__.py
+> git show :datekata/settings.py
+> git show :date/views.py
+> git show :date/urls.py
+> git show :datekata/settings.py
+> git show :date/urls.py
+> git show :datekata/urls.py
+> git show :datekata/settings.py
+> git show :date/views.py
+> git show :datekata/settings.py
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :date/templates/registration/login.html
+> git ls-files --stage -- date/templates/registration/
+> git show :date/views.py
+> git check-ignore -z --stdin
+> git show :date/templates/core/home.html
+> git ls-files --stage -- date/templates/core/
+> git check-ignore -z --stdin
+> git show :date/templates/registration/login.html
+> git ls-files --stage -- date/templates/registration/
+> git show :date/templates/core/home.html
+> git ls-files --stage -- date/templates/core/
+> git show :datekata/urls.py
+> git show :date/templates/registration/login.html
+> git ls-files --stage -- date/templates/registration/
+> git show :datekata/urls.py
+> git show :datekata/settings.py
+> git show :date/views.py
+> git show :datekata/settings.py
+> git show :datekata/wsgi.py
+> git show :datekata/urls.py
+> git show :requirements.txt
+> git ls-files --stage -- ./
+> git check-ignore -z --stdin
+> git show :requirements.txt
+> git show :requirements.txt
+> git show :requirements.txt
+> git show :datekata/settings.py
+> git show :date/models.py
+> git show :requirements.txt
+> git show :date/models.py
+> git show :date/views.py
+> git show :date/models.py
+> git check-ignore -z --stdin
+> git show :date/forms.py
+> git ls-files --stage -- date/
+> git show :date/views.py
+> git show :date/urls.py
+> git show :date/views.py
+> git show :date/urls.py
+> git show :date/views.py
+> git show :date/urls.py
+> git show :date/views.py
+> git show :datekata/urls.py
+> git check-ignore -z --stdin
+> git show :date/views.py
+> git show :date/urls.py
+> git show :date/views.py
+> git show :date/templates/registration/login.html
+> git show :date/models.py
+> git show :date/views.py
+> git show :date/templates/core/home.html
+> git show :date/views.py
+> git show :date/views.py
+> git show :date/views.py
+> git show :date/models.py
+> git show :date/urls.py
+> git show :date/views.py
+> git show :datekata/settings.py
+> git show :date/templates/base.html
+> git ls-files --stage -- date/templates/
+> git check-ignore -z --stdin
+> git show :datekata/settings.py
+> git show :date/templates/navbar.html
+> git ls-files --stage -- date/templates/
+> git check-ignore -z --stdin
+> git show :date/urls.py
+> git show :date/templates/base.html
+> git ls-files --stage -- date/templates/
+> git show :date/templates/base.html
+> git ls-files --stage -- date/templates/
+> git show :date/models.py
+> git show :date/views.py
+> git check-ignore -z --stdin
+> git show :datekata/settings.py
+> git show :date/views.py
+> git show :datekata/urls.py
+> git show :date/urls.py
+> git show :virtual/lib/python3.6/site-packages/django/conf/urls/static.py
+> git check-ignore -z --stdin
+> git show :date/urls.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :~>/vscode-root/logs/20181207T132916/exthost1/output_logging_20181207T132925/1-Git.log
+> git check-ignore -z --stdin
+> git show :datekata/settings.py
+> git check-ignore -z --stdin
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git ls-files --stage -- datekata/
+> git show :datekata/settings.py
+> git ls-files --stage -- datekata/
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git ls-files --stage -- datekata/
+> git show :datekata/settings.py
+> git ls-files --stage -- datekata/
+> git show :datekata/settings.py
+> git ls-files --stage -- datekata/

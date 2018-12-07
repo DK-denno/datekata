@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Pros 'n' Cons</a>
+    <button class="btn btn-outline-success" data-toggle="modal" data-target="#account" > New Project </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Options
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a href="/auth/password/change/">Change password</a>
+            <a href="/logout">Logout</a><br>
+          </div>
+        </li>
+     
+        <form class="form-inline my-2 my-lg-0" style="margin-left: 250px;" action="" >
+            <input class="form-control mr-sm-2" name='projects' type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+      
+      </ul>
+      <ul class="navbar-nav mr-auto" >
+      <li class="navbar-brand" >
+        {% if request.user.profile.dp %}
+       
+        <img src="{{request.user.profile.dp.url }}" style="border-radius: 50%; width: 50px; height: 50px;"  id="prof">   
+         {% else %}
+         <a class="nav-link" href="/profile/">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" style="border-radius: 50%; width: 50px; height: 50px;">
+          </a>
+        {% endif %}
+        <a class="nav-link" href="/profile/">
+       <h5> {{request.user.username}}</h5>
+       </a>
+      </a>
+      </li>
+    </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
