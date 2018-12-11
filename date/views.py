@@ -12,6 +12,7 @@ from django.contrib.auth.models import User
 from .models import Profile
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
+import requests
 
 
 @login_required
@@ -49,7 +50,9 @@ def profiles(request, id):
 
 @login_required
 def about(request):
-    return render(request, 'core/about.html')
+    response = requests.get('https://www.codewars.com/api/v1/code-challenges/fibonacci')
+    kata = response.json()
+    return render(request, 'core/about.html', {'des': kata['description'], 'name': kata['name']})
 
 
 def signup(request):
@@ -92,3 +95,4 @@ def activate(request, uidb64, token):
             'Thank you for your email confirmation. Now you can' '<a href="/accounts/login"> login </a>your account.')
     else:
         return HttpResponse('Activation link is invalid!')
+
