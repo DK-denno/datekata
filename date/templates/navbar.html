@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Pros 'n' Cons</a>
+    <a class="navbar-brand" href="/">Date Kata</a>
     <button class="btn btn-outline-success" data-toggle="modal" data-target="#account" > New Project </button>
+    <a href="about"><button class="btn btn-outline-success"> GET KATA </button></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,11 +31,11 @@
        
         <img src="{{request.user.profile.dp.url }}" style="border-radius: 50%; width: 50px; height: 50px;"  id="prof">   
          {% else %}
-         <a class="nav-link" href="/profile/">
+         <a class="nav-link" href="profile">
         <img src="https://www.w3schools.com/howto/img_avatar.png" style="border-radius: 50%; width: 50px; height: 50px;">
           </a>
         {% endif %}
-        <a class="nav-link" href="/profile/">
+        <a class="nav-link" href="profile">
        <h5> {{request.user.username}}</h5>
        </a>
       </a>

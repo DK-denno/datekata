@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from .forms import ProfileForm
 from django.contrib.auth import login, authenticate
 from .forms import SignupForm
@@ -12,6 +12,8 @@ from django.contrib.auth.models import User
 from .models import Profile
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
+import requests
+
 
 @login_required
 def home(request):
@@ -22,26 +24,35 @@ def home(request):
         profile.save()
     return render(request, 'core/home.html')
 
-@login_required
-def profile(request):
-        form = ProfileForm()
-        current_user=request.user
-        profile = Profile.objects.get(user=current_user)
-        if request.method == 'POST':
-                form = ProfileForm(request.POST,request.FILES,instance=profile)
-                if form.is_valid():
-                        form.save()
-                        return redirect('profile')
-                else:
-                        message = 'Fill in the form appropriately'
-                        return render(request,'profile/profile.html',{"profile":profile,"form":form,"message":message})
-        return render(request,'profile/profile.html',{"form":form,"profile":profile})
 
 @login_required
-def profiles(request,id):
-        user=User.objects.get(id=id)
-        posts = Posts.objects.filter(user=user)
-        return render(request,'profile/profiles.html',{"user":user,"posts":posts})
+def profile(request):
+    form = ProfileForm()
+    current_user = request.user
+    profile = Profile.objects.get(user=current_user)
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+        else:
+            message = 'Fill in the form appropriately'
+            return render(request, 'profile/profile.html', {"profile": profile, "form": form, "message": message})
+    return render(request, 'profile/profile.html', {"form": form, "profile": profile})
+
+
+@login_required
+def profiles(request, id):
+    user = User.objects.get(id=id)
+    posts = Posts.objects.filter(user=user)
+    return render(request, 'profile/profiles.html', {"user": user, "posts": posts})
+
+
+@login_required
+def about(request):
+    response = requests.get('https://www.codewars.com/api/v1/code-challenges/fibonacci')
+    kata = response.json()
+    return render(request, 'core/about.html', {'des': kata['description'], 'name': kata['name']})
 
 
 def signup(request):
@@ -79,8 +90,9 @@ def activate(request, uidb64, token):
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        login(request, user,backend='django.contrib.auth.backends.ModelBackend')
+        login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         return HttpResponse(
             'Thank you for your email confirmation. Now you can' '<a href="/accounts/login"> login </a>your account.')
     else:
         return HttpResponse('Activation link is invalid!')
+
