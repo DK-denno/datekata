@@ -160,3 +160,9 @@ Use '--' to separate paths from revisions, like this:
 > git ls-files --stage -- datekata/
 > git show :datekata/settings.py
 > git ls-files --stage -- datekata/
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git show :datekata/settings.py
+> git check-ignore -z --stdin
+> git show :requirements.txt
+> git show :date/views.py
