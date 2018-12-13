@@ -9,7 +9,7 @@ class ProfileForm(forms.ModelForm):
         exclude = ['user']
         fields = ['dp','bio']
 
-class MessagForm(forms.ModelForm):
+class MessageForm(forms.ModelForm):
     class Meta:
         model = Messages
         exclude = []

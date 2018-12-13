@@ -1,0 +1,11 @@
+{% load bootstrap4 %}
+{% for message in mess %}
+{{message.message}}
+{% endfor %}
+<form action="" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+
+    {% bootstrap_form form %}
+    
+    <button class='btn btn-primary' type='submit' >SUBMIT</button>
+</form>

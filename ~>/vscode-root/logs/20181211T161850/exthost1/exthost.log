@@ -12,3 +12,5 @@
 [2018-12-11 16:18:57.578] [exthost] [info] eager extensions activated
 [2018-12-11 16:28:19.873] [exthost] [info] ExtensionService#_doActivateExtension vscode.python {"startup":false,"activationEvent":"onLanguage:python"}
 [2018-12-11 16:28:19.873] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/python/out/pythonMain
+[2018-12-11 17:00:24.740] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"activationEvent":"onLanguage:html"}
+[2018-12-11 17:00:24.740] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/html-language-features/client/dist/htmlMain
