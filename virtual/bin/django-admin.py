@@ -1,4 +1,4 @@
-#!/home/levy/Documents/Projects/test/datekata/virtual/bin/python3.6
+#!/root/Documents/datekata/virtual/bin/python3
 from django.core import management
 
 if __name__ == "__main__":

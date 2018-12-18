@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,redirect
 from .forms import ProfileForm,MessageForm
 from .models import Profile,Messages
+import random
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from .forms import ProfileForm
@@ -79,7 +80,9 @@ def message(request,pk):
                         return redirect('/')
         return render(request,'chat.html',{"mess":mess,"form":messageform})
 def about(request):
-    response = requests.get('https://www.codewars.com/api/v1/code-challenges/fibonacci')
+    katas = ['fibonacci','valid-braces',]
+    uname = random.choice(katas)
+    response = requests.get('https://www.codewars.com/api/v1/code-challenges/{}'.format(uname))
     kata = response.json()
     return render(request, 'core/about.html', {'des': kata['description'], 'name': kata['name']})
 

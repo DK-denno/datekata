@@ -1,4 +1,4 @@
-#!/home/levy/Documents/Projects/test/datekata/virtual/bin/python
+#!/root/Documents/datekata/virtual/bin/python
 
 import sys
 import getopt
