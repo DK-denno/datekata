@@ -61,27 +61,33 @@ def profiles(request,id):
 
 
 def message(request,pk):
-        recipient = User.objects.get(id=pk)
+        #Querying users so as to hook up a text to their own account both ssender and recipient
+        rec = User.objects.get(id=pk)
         messageform = MessageForm()
-        messages = Messages.objects.filter(recipient=recipient)
-        mess = []
-        for message in messages:
-                if message.sender == request.user:
-                        mess.append(message)
-                        print(message.sender)
-                        # print (message.recipient)
+        rmessages = Messages.objects.filter(recipient=request.user)
+        smessages = Messages.objects.filter(sender=request.user)
+        alltexts = []
+        
+        # All texts concerning the current user are queryed and put in the same list
+        for message in rmessages:
+           alltexts.append(message)
+        for message in smessages:
+           alltexts.append(message)
+       
+        #submitting th messages form
         if request.method == 'POST':
                 messageform = MessageForm(request.POST,request.FILES)
                 if messageform.is_valid():
                         messaging = messageform.save(commit=False)
                         messaging.sender = request.user
-                        messaging.recipient = recipient
+                        messaging.recipient = rec
                         messaging.save()
                         return redirect('/')
-        return render(request,'chat.html',{"mess":mess,"form":messageform})
+        return render(request,'chat.html',{"form":messageform,"alltexts":alltexts,"rec":rec})
 def about(request):
-    katas = ['fibonacci','valid-braces',]
+    katas = ['fibonacci','valid-braces','consecutive-strings']
     uname = random.choice(katas)
+    print(uname)
     response = requests.get('https://www.codewars.com/api/v1/code-challenges/{}'.format(uname))
     kata = response.json()
     return render(request, 'core/about.html', {'des': kata['description'], 'name': kata['name']})
@@ -92,7 +98,7 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.is_active = False
+            user.is_active = True
             user.save()
             current_site = get_current_site(request)
             mail_subject = 'Activate your datekata account.'
@@ -106,7 +112,7 @@ def signup(request):
             email = EmailMessage(
                 mail_subject, message, to=[to_email]
             )
-            email.send()
+            # email.send()
             return HttpResponse('Please confirm your email address to complete the registration')
     else:
         form = SignupForm()

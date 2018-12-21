@@ -24,3 +24,7 @@ class Messages(models.Model):
     sender = models.ForeignKey(User,related_name="sender")
     recipient = models.ForeignKey(User,related_name="recipient")
     message = models.CharField(max_length=10000000)
+    postedon = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["id"]

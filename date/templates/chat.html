@@ -1,6 +1,14 @@
 {% load bootstrap4 %}
-{% for message in mess %}
-{{message.message}}
+{% for message in alltexts %}
+{%  if message.recipient == rec %}
+{% if message.sender == request.user %}
+{{message.message}}....{{message.recipient}}.........{{message.sender}}<br>
+{% endif %}
+{% elif message.recipient == request.user%}
+{% if message.sender == rec %}
+{{message.message}}<br>
+{% endif %}
+{% endif %}
 {% endfor %}
 <form action="" method="post" enctype="multipart/form-data">
     {%csrf_token%}
