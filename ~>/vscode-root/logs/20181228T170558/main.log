@@ -1,0 +1,60 @@
+[2018-12-28 17:05:58.102] [main] [info] update#setState idle
+[2018-12-28 17:06:28.108] [main] [info] update#setState checking for updates
+[2018-12-28 17:06:28.118] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-28 17:06:28.119] [main] [info] update#setState idle
+[2018-12-28 21:15:35.709] [main] [info] update#setState checking for updates
+[2018-12-28 21:15:35.716] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-28 21:15:35.716] [main] [info] update#setState idle
+[2018-12-28 22:15:35.714] [main] [info] update#setState checking for updates
+[2018-12-28 22:15:35.724] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-28 22:15:35.724] [main] [info] update#setState idle
+[2018-12-28 23:15:35.737] [main] [info] update#setState checking for updates
+[2018-12-28 23:15:35.746] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-28 23:15:35.747] [main] [info] update#setState idle
+[2018-12-29 00:15:35.768] [main] [info] update#setState checking for updates
+[2018-12-29 00:15:35.776] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-29 00:15:35.777] [main] [info] update#setState idle
+[2018-12-29 01:15:35.801] [main] [info] update#setState checking for updates
+[2018-12-29 01:15:35.809] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-29 01:15:35.810] [main] [info] update#setState idle
+[2018-12-29 02:15:35.833] [main] [info] update#setState checking for updates
+[2018-12-29 02:15:35.840] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-29 02:15:35.840] [main] [info] update#setState idle
+[2018-12-29 03:15:35.865] [main] [info] update#setState checking for updates
+[2018-12-29 03:15:35.872] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-29 03:15:35.873] [main] [info] update#setState idle
+[2018-12-29 09:48:02.560] [main] [info] update#setState checking for updates
+[2018-12-29 09:48:04.350] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-29 09:48:04.351] [main] [info] update#setState idle
+[2018-12-29 10:48:02.822] [main] [info] update#setState checking for updates
+[2018-12-29 10:48:02.831] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-29 10:48:02.831] [main] [info] update#setState idle
+[2018-12-29 22:11:56.593] [main] [info] update#setState checking for updates
+[2018-12-29 22:11:56.706] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-29 22:11:56.707] [main] [info] update#setState idle
+[2018-12-29 23:11:56.651] [main] [info] update#setState checking for updates
+[2018-12-29 23:11:56.658] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-29 23:11:56.659] [main] [info] update#setState idle
+[2018-12-30 00:11:56.703] [main] [info] update#setState checking for updates
+[2018-12-30 00:11:56.815] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-30 00:11:56.815] [main] [info] update#setState idle
+[2018-12-30 01:11:56.861] [main] [info] update#setState checking for updates
+[2018-12-30 01:11:56.869] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-30 01:11:56.869] [main] [info] update#setState idle
+[2018-12-30 02:11:56.902] [main] [info] update#setState checking for updates
+[2018-12-30 02:11:56.908] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-30 02:11:56.909] [main] [info] update#setState idle
+[2018-12-30 11:45:02.631] [main] [info] update#setState checking for updates
+[2018-12-30 11:45:02.638] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-30 11:45:02.638] [main] [info] update#setState idle
+[2018-12-30 12:45:02.662] [main] [info] update#setState checking for updates
+[2018-12-30 12:45:02.669] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-30 12:45:02.670] [main] [info] update#setState idle
+[2018-12-30 13:45:02.705] [main] [info] update#setState checking for updates
+[2018-12-30 13:45:02.713] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-30 13:45:02.713] [main] [info] update#setState idle
+[2018-12-30 15:38:48.874] [main] [info] update#setState checking for updates
+[2018-12-30 15:38:48.883] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
+[2018-12-30 15:38:48.883] [main] [info] update#setState idle
+[2018-12-30 16:38:53.732] [main] [info] update#setState checking for updates
+[2018-12-30 16:38:54.908] [main] [info] update#setState available for download
