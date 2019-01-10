@@ -10,6 +10,15 @@ class Profile(models.Model):
     dp = models.ImageField(upload_to='images')
     bio = HTMLField(max_length=500)
     phone_number = models.BigIntegerField(null=True)
+    DATASCIENCE = 'DS'
+    CYBERSECURITY = 'CYBER'
+    FRONTEND = 'FRONTEND'
+    FIELD_CHOICES = (
+        (DATASCIENCE, 'Datascience'),
+        (CYBERSECURITY, 'Cyber'),
+        (FRONTEND, 'Frontend'),
+    )
+    field = models.CharField(max_length=2,choices=FIELD_CHOICES,default=FRONTEND)
 
     def save_profile(self):
         self.save()
