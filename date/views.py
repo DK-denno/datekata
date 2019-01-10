@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render,redirect
-from .forms import ProfileForm,MessageForm
-from .models import Profile,Messages
+from django.shortcuts import render, redirect
+from .forms import ProfileForm, MessageForm
+from .models import Profile, Messages
 import random
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
@@ -14,7 +14,6 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
 from .tokens import account_activation_token
 from django.contrib.auth.models import User
-from .models import Profile
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
 import requests
@@ -54,35 +53,38 @@ def profiles(request, id):
 
 
 @login_required
-def profiles(request,id):
-        user=User.objects.get(id=id)
-        posts = Posts.objects.filter(user=user)
-        return render(request,'profile/profiles.html',{"user":user,"posts":posts})
+def profiles(request, id):
+    user = User.objects.get(id=id)
+    posts = Posts.objects.filter(user=user)
+    return render(request, 'profile/profiles.html', {"user": user, "posts": posts})
 
 
-def message(request,pk):
-        recipient = User.objects.get(id=pk)
-        messageform = MessageForm()
-        messages = Messages.objects.filter(recipient=recipient)
-        mess = []
-        for message in messages:
-                if message.sender == request.user:
-                        mess.append(message)
-                        print(message.sender)
-                        # print (message.recipient)
-        if request.method == 'POST':
-                messageform = MessageForm(request.POST,request.FILES)
-                if messageform.is_valid():
-                        messaging = messageform.save(commit=False)
-                        messaging.sender = request.user
-                        messaging.recipient = recipient
-                        messaging.save()
-                        return redirect('/')
-        return render(request,'chat.html',{"mess":mess,"form":messageform})
+def message(request, pk):
+    recipient = User.objects.get(id=pk)
+    messageform = MessageForm()
+    messages = Messages.objects.filter(recipient=recipient)
+    mess = []
+    for message in messages:
+        if message.sender == request.user:
+            mess.append(message)
+            print(message.sender)
+            # print (message.recipient)
+    if request.method == 'POST':
+        messageform = MessageForm(request.POST, request.FILES)
+        if messageform.is_valid():
+            messaging = messageform.save(commit=False)
+            messaging.sender = request.user
+            messaging.recipient = recipient
+            messaging.save()
+            return redirect('/')
+    return render(request, 'chat.html', {"mess": mess, "form": messageform})
+
+
 def about(request):
-    katas = ['fibonacci','valid-braces',]
+    katas = ['fibonacci', 'valid-braces', ]
     uname = random.choice(katas)
-    response = requests.get('https://www.codewars.com/api/v1/code-challenges/{}'.format(uname))
+    response = requests.get(
+        'https://www.codewars.com/api/v1/code-challenges/{}'.format(uname))
     kata = response.json()
     return render(request, 'core/about.html', {'des': kata['description'], 'name': kata['name']})
 
@@ -127,4 +129,3 @@ def activate(request, uidb64, token):
             'Thank you for your email confirmation. Now you can' '<a href="/accounts/login"> login </a>your account.')
     else:
         return HttpResponse('Activation link is invalid!')
-

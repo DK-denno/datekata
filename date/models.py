@@ -16,12 +16,12 @@ class Profile(models.Model):
     FRONTEND = 'FRONTEND'
     FIELD_CHOICES = (
         (DATASCIENCE, 'Datascience'),
-        (CYBERSECURITY, 'Cyber'),
+        (CYBERSECURITY, 'Cybersecurity'),
         (FRONTEND, 'Frontend'),
     )
     field = models.CharField(
         max_length=400, choices=FIELD_CHOICES, default=FRONTEND)
-    languages = models.CharField(max_length=2000, default='Angular')
+    technologies = models.CharField(max_length=2000, default='Angular')
 
     def save_profile(self):
         self.save()
