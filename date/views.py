@@ -17,6 +17,7 @@ from django.contrib.auth.models import User
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
 import requests
+from django.views.generic import ListView
 
 
 @login_required
@@ -129,3 +130,8 @@ def activate(request, uidb64, token):
             'Thank you for your email confirmation. Now you can' '<a href="/accounts/login"> login </a>your account.')
     else:
         return HttpResponse('Activation link is invalid!')
+
+
+class ProfileListView(ListView):
+    queryset = Profile.objects.all()
+    template_name = 'partners.html'
