@@ -4,7 +4,7 @@ confusable-homoglyphs==3.2.0
 defusedxml==0.5.0
 Django==1.11
 django-bootstrap4==0.0.7
-django-registration==2.4.1
+django-registration==3.1.2
 django-tinymce==2.7.0
 idna==2.7
 oauthlib==2.1.0
